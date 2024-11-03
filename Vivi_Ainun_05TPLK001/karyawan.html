@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karyawan - Sistem Informasi Manajemen Karyawan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="d-flex" id="wrapper">
+        <div class="bg-primary text-white sidebar" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4">
+                <img src="jua.jpg" alt="Universitas Bung Karno" style="width: 50px;">
+                <h5>Universitas Pamulang</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="index.html" class="list-group-item list-group-item-action bg-primary text-white">Dashboard</a>
+                <a href="karyawan.html" class="list-group-item list-group-item-action bg-primary text-white active">Karyawan</a>
+                <a href="jabatan.html" class="list-group-item list-group-item-action bg-primary text-white">Jabatan</a>
+                <a href="divisi.html" class="list-group-item list-group-item-action bg-primary text-white">Divisi</a>
+                <a href="absensi.html" class="list-group-item list-group-item-action bg-primary text-white">Absensi</a>
+                <a href="izin.html" class="list-group-item list-group-item-action bg-primary text-white">Izin</a>
+                <a href="lembur.html" class="list-group-item list-group-item-action bg-primary text-white">Lembur</a>
+            </div>
+        </div>
+        
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="btn btn-primary" id="menu-toggle">☰</button>
+                <span class="ml-auto">Welcome, <strong></strong> (Administrator)</span>
+            </nav>
+            <div class="container-fluid mt-4">
+                <h2>Data Karyawan</h2>
+                <p>Informasi lengkap tentang data karyawan</p>
+                <!-- Tabel Data Karyawan -->
+                <table class="table table-striped table-bordered mt-4">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Jabatan</th>
+                            <th>Divisi</th>
+                            <th>Email</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>221011400013</td>
+                            <td>Vivi Ainun</td>
+                            <td>Manager</td>
+                            <td>Keuangan</td>
+                            <td>viviainun@gmail.com</td>
+                            <td><button class="btn btn-primary btn-sm">Edit</button> <button class="btn btn-danger btn-sm">Hapus</button></td>
+                        </tr>
+                        <!-- Tambahkan data lainnya di sini -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+</html>
